@@ -10,7 +10,6 @@ class MaterialSupplier(models.Model):
 class MaterialManagement(models.Model):
     _name = 'material.management'
     _description = 'Material Management'
-    _rec_name = 'material_code'
 
     material_code = fields.Char(string='Material Code', required=True)
     material_name = fields.Char(string='Name', required=True)
