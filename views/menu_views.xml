@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- material/supplier menu -->
+    <menuitem id="material_management_menu_root" name="Material Management"/>
+
+
+    <menuitem id="management_menu_root" name="Management" parent="material_management_menu_root"/>
+    <menuitem id="menu_material_management" name="Materials" parent="management_menu_root" action="action_material_management" sequence="5"/>
+    <menuitem id="menu_material_supplier" name="Suppliers" parent="management_menu_root" action="action_material_supplier" sequence="10"/>
+    <!-- material/supplier finish -->
+
+</odoo>

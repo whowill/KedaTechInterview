@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_material_management_tree" model="ir.ui.view">
+        <field name="name">material.management.tree</field>
+        <field name="model">material.management</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="material_code"/>
+                <field name="material_name"/>
+                <field name="type"/>
+                <field name="buy_price"/>
+                <field name="material_supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_material_management_form" model="ir.ui.view">
+        <field name="name">material.management.form</field>
+        <field name="model">material.management</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="material_code"/>
+                        </group>
+                        <newline/>
+                        <group>
+                            <field name="material_name"/>
+                            <field name="material_supplier_id"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="buy_price"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_material_management" model="ir.actions.act_window">
+        <field name="name">Material Management</field>
+        <field name="res_model">material.management</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="keda_tech_take_home.view_material_management_search"/>
+    </record>
+
+    <record id="view_material_management_search" model="ir.ui.view">
+        <field name="name">material.management.search</field>
+        <field name="model">material.management</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="material_code"/>
+                <field name="material_name"/>
+                <field name="type" string="By Type"/>
+                <field name="material_supplier_id"/>
+            </search>
+        </field>
+    </record>
+</odoo>

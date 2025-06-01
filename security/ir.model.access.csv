@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_material_supplier,access_material_supplier,model_material_supplier,,1,1,1,1
+access_material_management,access_material_management,model_material_management,,1,1,1,1
